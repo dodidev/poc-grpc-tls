@@ -1,0 +1,21 @@
+// server/protos/service.proto
+
+syntax = "proto3";
+
+package service;
+
+
+option go_package = "./server/protos";
+
+service DataService {
+    rpc GetJsonData (Request) returns (Response);
+}
+
+message Request {
+    string query = 1;
+}
+
+message Response {
+    string json_data = 1;
+}
+
